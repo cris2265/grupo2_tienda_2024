@@ -5,5 +5,3 @@ Dom.innerHTML = `\
     <section id="cuerpo"></section>
     <footer id="footer"></footer>
 `
-
-console.log(Dom);
