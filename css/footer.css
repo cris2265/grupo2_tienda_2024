@@ -1,0 +1,48 @@
+#footer {
+    width: 100%;
+    height: 35rem;
+    background-color: #161C28;
+    display: grid;
+    grid-template-columns: 40% 60%;
+}
+#secciones_1 {
+    width: 100%;
+    height: 100%;
+    display: grid;
+    justify-content: center;
+    grid-template-rows: repeat(4, 23%);
+    gap: 1rem;
+}
+#secciones_1 h3 {
+    font-size: 4rem;
+    display: flex;
+    align-items: end;
+    color: #54BD95;
+}
+#secciones_1 span {
+    font-size: 2rem;
+    color: #A6A6A6;
+}
+
+#mail {
+    background-color: red;
+    width: 80%;
+    height: 80%;
+    display: flex;
+    align-items: center;
+    padding: 0.5rem;
+}
+#mail input{
+    width: 85%;
+    height: 85%;
+    border: none;
+    outline: none;
+    background-color: #161C28;
+    font-size: 1.7rem;
+}
+#flechita {
+    width: 4.5rem;
+    height: 85%;
+    background-color: #54BD95;
+    border-radius: 100%;
+}
