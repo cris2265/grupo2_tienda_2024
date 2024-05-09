@@ -1,0 +1,10 @@
+#cuerpo {
+    grid-column: 1/2;
+    grid-row: 2/2;
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+}
+.box_img img {
+    width: 10rem;
+    height: 10rem;
+}

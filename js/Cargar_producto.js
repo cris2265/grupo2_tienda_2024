@@ -1,6 +1,6 @@
 
 function cargar_producto(productos_list) {
-    let div_producto_list = document.querySelector("#productos")
+    let div_producto_list = document.querySelector("#cuerpo")
  
 
     productos_list.forEach(producto => {
