@@ -6,7 +6,9 @@ footer.innerHTML = `
         <span>Get started noew try our product</span>
         <div id="mail">
             <input type="email" placeholder="Enter your email here">
-            <div id="flechita"></div>
+            <div id="flechita">
+                <span class="material-symbols-outlined">arrow_forward</span>
+            </div>
         </div>
         <span id="copy">© 2024 Tienda Chicharronera.inc. Copyrigth and rights reserved</span>
     </div>
@@ -18,20 +20,20 @@ footer.innerHTML = `
             <span id="subtitulos">About</span>
             <span id="subtitulos">Contact us</span>
         </div>
-        <div id="suport_2">
+        <div id="suport_1">
             <span id="titulo">Help and Solution</span>
             <span id="subtitulos">Talk to support</span>
             <span id="subtitulos">Support docs</span>
             <span id="subtitulos">System status</span>
             <span id="subtitulos">Covid responde</span>
         </div>
-        <div id="suport_3">
+        <div id="suport_1">
             <span id="titulo">Product</span>
             <span id="subtitulos">Update</span>
             <span id="subtitulos">Security</span>
             <span id="subtitulos">Beta test</span>
             <span id="subtitulos">Pricing product</span>
         </div>
-        <h3>Terms and Conditions * Privacy Policy</h3>
+        <h3 id="terms">Terms and Conditions * Privacy Policy</h3>
     </div>
 `
