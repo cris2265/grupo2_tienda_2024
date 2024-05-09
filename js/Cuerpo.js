@@ -1,12 +1,6 @@
 import { Cargar_categorias } from "./Cargar_categoria.js"
 import { cargar_producto } from "./Cargar_producto.js";
 
-let cuerpo = document.querySelector("#cuerpo")
-
-cuerpo.innerHTML = `
-    <div id="categorias"></div>
-    <div id="productos"></div>
-`
 
 async function obtenerProductos() {
     try {
