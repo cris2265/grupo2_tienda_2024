@@ -1,0 +1,25 @@
+import { Cargar_categorias } from "./Cargar_categoria.js"
+import { cargar_producto } from "./Cargar_producto.js";
+
+let cuerpo = document.querySelector("#cuerpo")
+
+cuerpo.innerHTML = `
+    <div id="categorias"></div>
+    <div id="productos"></div>
+`
+
+async function obtenerProductos() {
+    try {
+        const res = await fetch('https://fakestoreapi.com/products');
+        const data = await res.json();
+        let productos_api = data;
+        
+        Cargar_categorias()    
+        // Mi programa
+        cargar_producto(productos_api);
+    } catch (error) {
+        console.error('Ha ocurrido un error al obtener los productos:', error);
+    }
+}
+
+obtenerProductos()
