@@ -1,4 +1,40 @@
 #categorias {
     grid-column: 2/3;
-
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);   
+    grid-template-rows: 15rem 15rem; 
+    gap: 1rem;    
+    flex-wrap: wrap;
+    margin-top: 2rem;
+}
+.opciones {
+    background-color: red;
+    display: flex;
+    border: 1px solid black;
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    font-size: 1.4rem;
+    font-weight: 700;
+    cursor: pointer;
+}
+.imagenes img {
+    width: 7rem;
+    height: 7rem;
+}
+.categoria-0 {
+    background-color: #F25930;
+}
+.categoria-1 {
+    background-color: #0B3D6F;
+}
+.categoria-2 {
+    background-color: #0081C7;
+}
+.categoria-3 {
+    background-color: #48BCD7;
 }

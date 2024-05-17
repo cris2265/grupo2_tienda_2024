@@ -3,7 +3,7 @@ header.innerHTML = `
 
 <nav>
     <nav class="logito">
-        <a href="https://github.com/DereckAbraham" class="logo-link">
+        <a href="https://github.com/DereckAbrahham" class="logo-link">
             <img src="https://i0.wp.com/www.followchain.org/wp-content/uploads/2024/02/sad-hamster-Photoroom.png-Photoroom.png?w=604&ssl=1" alt="Logo" class="log">
             <h2>Chicharrones Shop</h2>
         </a>
