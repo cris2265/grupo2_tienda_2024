@@ -9,6 +9,7 @@
     height: 10rem;
 }
 
+
 #div_producto_list {
     display: grid;
     grid-template-columns: repeat(4, 1fr); 
