@@ -39,7 +39,6 @@ function cargar_producto(productos_list) {
             <span class="price">Q.${producto.price}</span>
             <div class="buy_btn" id="${producto.id}">Comprar Produc. ${producto.id}</div>
             <div class="envio">Envio GRATIS</div>
-=======
         </div>        
         `
         div_producto_list.appendChild(div)
