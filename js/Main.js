@@ -1,6 +1,6 @@
 let Dom = document.querySelector("#root");
 
-Dom.innerHTML = `\
+Dom.innerHTML = `
     <header id="header"></header>
     <section id="categorias"></section>
     <section id="cuerpo"></section>

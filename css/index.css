@@ -4,3 +4,65 @@
     grid-template-rows: 10rem 150rem 35rem;
     grid-template-rows: 10rem 200rem 35rem;
 }
+@media screen and (min-width: 375px) and (max-width: 480px) {
+    #root {
+        width: 100%;
+        height: 100%;
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        background-color: #00ff5e;
+    }
+}
+@media screen and (min-width: 481px) and (max-width: 768px) {
+    #root {
+        width: 100%;
+        height: 100%;
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        background-color: #ff0000;
+    }
+}
+@media screen and (min-width: 769px) and (max-width: 1200px) {
+    #root {
+        width: 100%;
+        height: 100%;
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        background-color: #6600ff;
+    }
+}
+@media screen and (min-width: 1201px) and (max-width: 1366px) {
+    #root {
+        width: 100%;
+        height: 100%;
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        background-color: #11ff00;
+    }
+}
+@media screen and (min-width: 800px) and (max-width: 1920px) {
+    #root {
+        width: 100%;
+        height: 100%;
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        background-color: #ff00ae;
+    }
+}
+
+
