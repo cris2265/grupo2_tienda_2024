@@ -4,7 +4,7 @@ header.innerHTML = `
 <nav>
     <nav class="logito">
         <a href="https://github.com/DereckAbrahham" class="logo-link">
-            <img src="https://i0.wp.com/www.followchain.org/wp-content/uploads/2024/02/sad-hamster-Photoroom.png-Photoroom.png?w=604&ssl=1" alt="Logo" class="log">
+            <img src="https://st2.depositphotos.com/4265001/12342/v/950/depositphotos_123429310-stock-illustration-pig-logo-illustration.jpg" alt="Logo" class="log">
             <h2>Chicharrones Shop</h2>
         </a>
     </nav>
@@ -16,8 +16,16 @@ header.innerHTML = `
         <div>Support</div>
     </nav>
     <nav class="imagen">
-        <img src="https://i0.wp.com/www.followchain.org/wp-content/uploads/2024/02/sad-hamster-Photoroom.png-Photoroom.png?w=604&ssl=1" alt="" class="log">
-        <img src="https://i0.wp.com/www.followchain.org/wp-content/uploads/2024/02/sad-hamster-Photoroom.png-Photoroom.png?w=604&ssl=1" alt="" class="logDiferente">
+    <span class="material-symbols-outlined">
+    shopping_cart
+    </span>
+    <span class="material-symbols-outlined">
+    search
+    </span>
+    <input type="text" class="entradaTxt">
+    <span class="material-symbols-outlined">
+person
+</span>
     </nav>
 </nav>
 
