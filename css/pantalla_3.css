@@ -2,10 +2,75 @@
     #root {
         width: 100%;
         height: 100%;
-        position: absolute;
         top: 0;
         left: 0;
         right: 0;
         bottom: 0;
+        display: flex;
+        flex-direction: column;
     }
-}
+    #header {
+        display: flex;
+        width: 100%;
+        padding: 1rem;
+    }
+    .logito h2 {
+        display: none;
+    }
+    .tipos {
+        width: 100%;
+        display: flex;
+        gap: 1rem;
+    }
+    .tipos div {
+        width: 100%;
+    }
+    #categorias {
+        width: 100%;
+        padding: 1rem;
+        display: flex;
+        justify-content: space-between;
+        flex-direction: row;
+    }
+    .opciones {
+        width: 15rem;
+        height: 15rem;
+    }
+    #cuerpo {
+        padding: 1rem;
+        display: flex;
+        flex-wrap: wrap;
+        gap: 2rem;
+        justify-content: space-between;
+    }
+    .item_producto {
+        width: 30%;
+        display: flex;
+
+    }
+    #footer {
+        padding: 1rem;
+    }
+    #secciones_1 h3 {
+        font-size: 4rem;
+    }
+    #secciones_1 span {
+        font-size: 1.5rem;
+    }
+    #mail {
+        width: 90%;
+        height: 70%;
+    }   
+    #mail input {
+        font-size: 1.5rem;
+    }
+    #titulo {
+        font-size: 2rem;
+    }
+    #subtitulos {
+        font-size: 1.8rem;
+    }
+    #terms {
+        font-size: 2rem;
+    }
+}   
