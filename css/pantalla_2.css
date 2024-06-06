@@ -7,6 +7,76 @@
         left: 0;
         right: 0;
         bottom: 0;
-
+        display: flex;
+        flex-direction: column;
+        padding: 0;
+    }
+    #header {
+        display: flex;
+        width: 100%;
+        padding: 1rem;
+        flex-direction: row;
+        justify-content: space-between; 
+    }
+    .logito h2 {
+        display: none;
+    }
+    .tipos {
+        width: 100%;
+        display: flex;
+        flex-direction: row;
+        gap: 1rem; 
+    }
+    .tipos div {
+        width: 100%;
+    }
+    #categorias {
+        width: 100%;
+        padding: 1rem; 
+        display: flex;
+        justify-content: space-between;
+        flex-direction: row;
+    }
+    .opciones {
+        width: 12rem; 
+        height: 12rem; 
+    }
+    #cuerpo {
+        padding: 1rem; 
+        display: flex;
+        flex-wrap: wrap;
+        gap: 1.5rem;
+        justify-content: space-between;
+    }
+    .item_producto {
+        width: 45%; 
+        display: flex;
+        flex-direction: column;
+        align-items: center; 
+    }
+    #footer {
+        padding: 1rem; 
+    }
+    #secciones_1 h3 {
+        font-size: 3rem; 
+    }
+    #secciones_1 span {
+        font-size: 1.2rem; 
+    }
+    #mail {
+        width: 90%;
+        height: 70%;
+    }
+    #mail input {
+        font-size: 1.2rem; 
+    }
+    #titulo {
+        font-size: 1.8rem;
+    }
+    #subtitulos {
+        font-size: 1.5rem; 
+    }
+    #terms {
+        font-size: 1.8rem;
     }
 }
