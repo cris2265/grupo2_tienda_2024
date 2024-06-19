@@ -15,7 +15,7 @@ document.addEventListener('DOMContentLoaded', () => {
             <div>Support</div>
         </nav>
         <nav class="imagen">
-            <span class="material-symbols-outlined">
+            <span class="material-symbols-outlined carrito" style="cursor: pointer;">
                 shopping_cart
             </span>
             <span class="material-symbols-outlined">
@@ -55,7 +55,36 @@ document.addEventListener('DOMContentLoaded', () => {
             </div>
         </div>
     </div>
+
+    <div id="cartModal" class="modal">
+        <div class="modal-content">
+            <span class="close-cart">&times;</span>
+            <div class="cart-container">
+                <h1>Carrito de Compras</h1>
+                <p>Tu carrito está vacío.</p>
+            </div>
+        </div>
+    </div>
     `;
+
+    // Paso 3: Implementar la funcionalidad en JavaScript
+    const cartModal = document.getElementById("cartModal");
+    const carrito = document.querySelector(".carrito");
+    const closeCart = document.querySelector(".close-cart");
+
+    carrito.addEventListener("click", () => {
+        cartModal.style.display = "block";
+    });
+
+    closeCart.addEventListener("click", () => {
+        cartModal.style.display = "none";
+    });
+
+    window.addEventListener("click", (event) => {
+        if (event.target == cartModal) {
+            cartModal.style.display = "none";
+        }
+    });
 
     const loginModal = document.getElementById("loginModal");
     const userInfoModal = document.getElementById("userInfoModal");
