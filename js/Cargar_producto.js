@@ -1,5 +1,3 @@
-// Archivo 1: cargar_producto.js
-
 function cargar_producto(productos_list) {
     let div_producto_list = document.querySelector("#cuerpo");
 
@@ -37,18 +35,16 @@ function cargar_producto(productos_list) {
         buyBtn.addEventListener('click', () => {
             alert(`Producto ${producto.id} agregado al carrito!`);
             agregarAlCarrito(producto); // Llamar a la función de agregar al carrito
-
         });
     });
 }
-    
-// Nueva función para exportar el producto seleccionado
+
+let productoSeleccionado = null;
+
 function agregarAlCarrito(producto) {
     // Aquí podemos implementar cualquier lógica adicional antes de exportar
     exportarProductoSeleccionado(producto);
 }
-
-let productoSeleccionado = null;
 
 function exportarProductoSeleccionado(producto) {
     productoSeleccionado = producto;
