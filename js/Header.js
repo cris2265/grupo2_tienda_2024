@@ -1,3 +1,4 @@
+import { obtenerProductoSeleccionado } from './Cargar_producto.js';
 document.addEventListener('DOMContentLoaded', () => {
     let header = document.querySelector("#header");
     header.innerHTML = `
@@ -15,19 +16,12 @@ document.addEventListener('DOMContentLoaded', () => {
             <div>Support</div>
         </nav>
         <nav class="imagen">
-            <span class="material-symbols-outlined carrito" style="cursor: pointer;">
-                shopping_cart
-            </span>
-            <span class="material-symbols-outlined">
-                search
-            </span>
+            <span class="material-symbols-outlined carrito" style="cursor: pointer;">shopping_cart</span>
+            <span class="material-symbols-outlined">search</span>
             <input type="text" class="entradaTxt">
-            <span id="loginBtn" class="material-symbols-outlined" style="cursor: pointer;">
-                person
-            </span>
+            <span id="loginBtn" class="material-symbols-outlined" style="cursor: pointer;">person</span>
         </nav>
     </nav>
-    
     <div id="loginModal" class="modal">
         <div class="modal-content">
             <span class="close">&times;</span>
@@ -56,35 +50,101 @@ document.addEventListener('DOMContentLoaded', () => {
         </div>
     </div>
 
-    <div id="cartModal" class="modal">
-        <div class="modal-content">
-            <span class="close-cart">&times;</span>
-            <div class="cart-container">
-                <h1>Carrito de Compras</h1>
-                <p>Tu carrito está vacío.</p>
-            </div>
+<div id="cartModal" class="modal">
+    <div class="modal-content">
+        <span class="close-cart">&times;</span>
+        <div class="cart-container">
+            <h1>Carrito de Compras</h1>
+            <p class="empty-cart-message">Tu carrito está vacío.</p>
+            <div class="productos-seleccionados"></div>
         </div>
     </div>
+</div>
     `;
 
     // Paso 3: Implementar la funcionalidad en JavaScript
     const cartModal = document.getElementById("cartModal");
     const carrito = document.querySelector(".carrito");
     const closeCart = document.querySelector(".close-cart");
-
+    const productosSeleccionadosContainer = document.querySelector(".productos-seleccionados");
+    const emptyCartMessage = document.querySelector(".empty-cart-message");
+    
+    // Función para obtener producto seleccionado (debe ser definida por el usuario)
     carrito.addEventListener("click", () => {
+        const productoSeleccionado = obtenerProductoSeleccionado();
+        if (productoSeleccionado) {
+            // Lógica para mostrar los detalles del producto en el carrito
+            agregarProductoAlCarrito(productoSeleccionado);
+        }
         cartModal.style.display = "block";
     });
+    
 
+    
+    // Cerrar carrito
     closeCart.addEventListener("click", () => {
         cartModal.style.display = "none";
     });
-
+    
+    // Cerrar carrito al hacer clic fuera de él
     window.addEventListener("click", (event) => {
         if (event.target == cartModal) {
             cartModal.style.display = "none";
         }
     });
+    
+    // Agregar producto al carrito
+    function agregarProductoAlCarrito(producto) {
+        // Crear elementos HTML para el producto
+        const productoDiv = document.createElement("div");
+        productoDiv.classList.add("producto");
+        productoDiv.dataset.id = producto.id;
+    
+        const productoTitulo = document.createElement("h4");
+        productoTitulo.textContent = producto.title;
+    
+        const productoPrecio = document.createElement("p");
+        productoPrecio.textContent = `$${producto.price.toFixed(2)}`;
+    
+        const eliminarBtn = document.createElement("button");
+        eliminarBtn.textContent = "Eliminar";
+
+        let imagen = document.createElement("div")
+        imagen.innerHTML = `
+            <img src="${producto.image}" alt="">
+        `
+
+        eliminarBtn.addEventListener("click", () => {
+            eliminarProductoDelCarrito(producto.id);
+        });
+    
+        // Añadir elementos al contenedor de producto
+        productoDiv.appendChild(productoTitulo);
+        productoDiv.appendChild(productoPrecio);
+        productoDiv.appendChild(eliminarBtn);
+        productoDiv.appendChild(imagen);
+        
+        // Añadir producto al contenedor de productos seleccionados
+        productosSeleccionadosContainer.appendChild(productoDiv);
+    
+        // Ocultar mensaje de carrito vacío
+        emptyCartMessage.style.display = "none";
+    }
+    
+    // Eliminar producto del carrito
+    function eliminarProductoDelCarrito(productoId) {
+        const productoDiv = document.querySelector(`.producto[data-id='${productoId}']`);
+        if (productoDiv) {
+            productosSeleccionadosContainer.removeChild(productoDiv);
+            
+            // Mostrar mensaje de carrito vacío si no hay productos
+            if (productosSeleccionadosContainer.children.length === 0) {
+                emptyCartMessage.style.display = "block";
+            }
+        }
+    }
+
+    
 
     const loginModal = document.getElementById("loginModal");
     const userInfoModal = document.getElementById("userInfoModal");
